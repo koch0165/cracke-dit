@@ -3,7 +3,7 @@ from threading import Thread, Event
 
 import json
 
-from impacket.examples.secretsdump import NTDSHashes
+from examples.secretsdump import NTDSHashes
 import re
 import codecs
 import locale
