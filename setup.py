@@ -301,8 +301,8 @@ if __name__ == '__main__':
         download_url=DOWNLOAD_URL,
         classifiers=CLASSIFIERS,
 
-        package_dir={'': {2: 'lib', 3: 'lib3'}[sys.version_info[0]]},
-        packages=['yaml'],
+        #package_dir={'': {2: 'lib', 3: 'lib3'}[sys.version_info[0]]},
+        packages=['impacket','impacket.examples'],
         ext_modules=[
             Extension('_yaml', ['ext/_yaml.pyx'],
                 'libyaml', "LibYAML bindings", LIBYAML_CHECK,
