@@ -303,11 +303,11 @@ if __name__ == '__main__':
 
         #package_dir={'': {2: 'lib', 3: 'lib3'}[sys.version_info[0]]},
         packages=['impacket','impacket.examples'],
-        ext_modules=[
-            Extension('_yaml', ['ext/_yaml.pyx'],
-                'libyaml', "LibYAML bindings", LIBYAML_CHECK,
-                libraries=['yaml']),
-        ],
+        #ext_modules=[
+        #    Extension('_yaml', ['ext/_yaml.pyx'],
+        #        'libyaml', "LibYAML bindings", LIBYAML_CHECK,
+        #        libraries=['yaml']),
+        #],
 
         distclass=Distribution,
         cmdclass=cmdclass,
