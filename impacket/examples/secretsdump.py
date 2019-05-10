@@ -106,14 +106,17 @@ class NTDSHashes:
                     userName = '%s' % record[self.NAME_TO_INTERNAL['sAMAccountName']]
                 else:
                     userName = 'N/A'
+                    return None, True
                 if record[self.NAME_TO_INTERNAL['name']] is not None:
                     displayName = '%s' % record[self.NAME_TO_INTERNAL['name']]
                 else:
                     displayName = 'N/A'
+                    return None, True
                 if record[self.NAME_TO_INTERNAL['objectGUID']] is not None:
                     objectGuid = '%s' % record[self.NAME_TO_INTERNAL['objectGUID']]
                 else:
                     objectGuid = 'N/A'
+                    return None, True
                 fields = "%s:%s:%s" % (displayName, userName, objectGuid)
                 return fields, True
             else:
